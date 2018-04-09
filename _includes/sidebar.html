@@ -1,0 +1,70 @@
+<aside class="sidebar">
+    <div class="sidebar_2_wrapper">
+        <div class="sidebar_2">
+            <a href="/runtime/overview" data-page="runtime-page">
+                <div class="sidebar_2_item sidebar_2_item_runtime">
+                    <img class="sidebar_2_item__image" src="/assets/static/pm2-logo-r.png">
+                    <div class="sidebar_2_item__text">Runtime</div>
+                </div>
+            </a>
+            <a href="/monitoring/overview" data-page="monitoring-page">
+                <div class="sidebar_2_item sidebar_2_item_monitoring">
+                    <img class="sidebar_2_item__image" src="/assets/static/pm2-logo-m.png">
+                    <div class="sidebar_2_item__text">Monitoring</div>
+                </div>
+            </a>
+            <a href="/enterprise/overview" data-page="enterprise-page">
+                <div class="sidebar_2_item sidebar_2_item_enterprise">
+                    <img class="sidebar_2_item__image" src="/assets/static/pm2-logo-e.png">
+                    <div class="sidebar_2_item__text">Enterprise</div>
+                </div>
+            </a>
+        <div class="lang-selector">
+          <!-- Adds links to other languages on the post -->
+          {% for lang in site.languages %}
+            {% unless site.lang == lang %}
+              {% if lang == site.default_lang %}
+                <a href="{{ site.baseurl_root }}{{ page.url }}" >Language: {% t langs.{{ lang }} %}</a>
+              {% else %}
+                <a href="{{ site.baseurl_root }}/{{ lang }}{{ page.url }}" >Language: <br>{% t langs.{{ lang }} %}</a>
+              {% endif %}
+
+              {% assign next = forloop.index | plus: 1 %}
+
+              {% if forloop.last != true and site.languages[forloop.index] != site.lang or site.languages[forloop.index] == site.lang and next < forloop.length %}
+                <span class="separator"> &bull; </span>
+              {% endif %}
+
+            {% endunless %}
+          {% endfor %}
+        </div>
+        </div>
+        <div class="main_content">
+        </div>
+    </div>
+    <div class="sidebar-nav">
+
+    <ul id="acc">
+    {% if page.url contains 'runtime' %}{% assign category ='runtime' %}{% elsif page.url contains "monitoring" %}{% assign category ="monitoring" %}{% elsif page.url contains "enterprise" %}{% assign category ="enterprise" %}{% else %}{% assign category ='runtime' %}{% endif %}
+    {% for item in site.data.sidebar.[category] %}
+    {% if site.lang == 'ch' %}{% assign ch_path = '/ch'  %}{% endif %}
+    {% assign slug_title = item.title | slugify %}
+    {% if page.url contains slug_title %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
+        <li class="{{ active }}">
+            <a href="{{ ch_path }}{{ item.url }}">{{ item.title }}</a>
+            {% if item.submenu  %}
+                {% if page.url contains item.url  %}
+                    <ul>
+                        {% for entry in item.submenu %}
+                        {% if page.url contains entry.url %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
+                        <li class="{{ active }}"><a href="{{ ch_path }}{{ entry.url }}">{{ entry.page }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+
+    </div>
+</aside>
