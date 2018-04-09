@@ -47,17 +47,16 @@
     <ul id="acc">
     {% if page.url contains 'runtime' %}{% assign category ='runtime' %}{% elsif page.url contains "monitoring" %}{% assign category ="monitoring" %}{% elsif page.url contains "enterprise" %}{% assign category ="enterprise" %}{% else %}{% assign category ='runtime' %}{% endif %}
     {% for item in site.data.sidebar.[category] %}
-    {% if site.lang == 'ch' %}{% assign ch_path = '/ch'  %}{% endif %}
     {% assign slug_title = item.title | slugify %}
     {% if page.url contains slug_title %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
         <li class="{{ active }}">
-            <a href="/{{ site.baseurl }}{{ ch_path }}{{ item.url }}">{{ item.title }}</a>
+            <a href="/{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
             {% if item.submenu  %}
                 {% if page.url contains item.url  %}
                     <ul>
                         {% for entry in item.submenu %}
                         {% if page.url contains entry.url %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
-                        <li class="{{ active }}"><a href="/{{ site.baseurl }}{{ ch_path }}{{ entry.url }}">{{ entry.page }}</a></li>
+                        <li class="{{ active }}"><a href="/{{ site.baseurl }}{{ entry.url }}">{{ entry.page }}</a></li>
                         {% endfor %}
                     </ul>
                 {% endif %}
