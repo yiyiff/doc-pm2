@@ -1,21 +1,21 @@
 <aside class="sidebar">
     <div class="sidebar_2_wrapper">
         <div class="sidebar_2">
-            <a href={{ "/runtime/overview" | relative_url }} data-page="runtime-page">
+            <a href="{{ "/runtime/overview" | relative_url }}" data-page="runtime-page">
                 <div class="sidebar_2_item sidebar_2_item_runtime">
-                    <img class="sidebar_2_item__image" src={{ "/assets/static/pm2-logo-r.png" | relative_url }}>
+                    <img class="sidebar_2_item__image" src="{{ "/assets/static/pm2-logo-r.png" | prepend: site.baseurl_root }}">
                     <div class="sidebar_2_item__text">Runtime</div>
                 </div>
             </a>
-            <a href={{ "/monitoring/overview" | relative_url }} data-page="monitoring-page">
+            <a href="{{ "/monitoring/overview" | relative_url }}" data-page="monitoring-page">
                 <div class="sidebar_2_item sidebar_2_item_monitoring">
-                    <img class="sidebar_2_item__image" src={{ "/assets/static/pm2-logo-m.png" | relative_url }}>
+                    <img class="sidebar_2_item__image" src="{{ "/assets/static/pm2-logo-m.png" | prepend: site.baseurl_root }}">
                     <div class="sidebar_2_item__text">Monitoring</div>
                 </div>
             </a>
-            <a href={{ "/enterprise/overview" | relative_url }} data-page="enterprise-page">
+            <a href="{{ "/enterprise/overview" | relative_url }}" data-page="enterprise-page">
                 <div class="sidebar_2_item sidebar_2_item_enterprise">
-                    <img class="sidebar_2_item__image" src={{ "/assets/static/pm2-logo-e.png" | relative_url }}>
+                    <img class="sidebar_2_item__image" src="{{ "/assets/static/pm2-logo-e.png" | prepend: site.baseurl_root }}">
                     <div class="sidebar_2_item__text">Enterprise</div>
                 </div>
             </a>
@@ -24,9 +24,9 @@
           {% for lang in site.languages %}
             {% unless site.lang == lang %}
               {% if lang == site.default_lang %}
-                <a href={{ "{{ site.baseurl_root }}{{ page.url }}" | relative_url }}>Language: {% t langs.{{ lang }} %}</a>
+                <a href="{{ site.baseurl_root }}{{ page.url }}">Language: {% t langs.{{ lang }} %}</a>
               {% else %}
-                <a href={{ "{{ site.baseurl_root }}/{{ lang }}{{ page.url }}" | relative_url }}>Language: <br>{% t langs.{{ lang }} %}</a>
+                <a href="{{ site.baseurl_root }}/{{ lang }}{{ page.url }}">Language: <br>{% t langs.{{ lang }} %}</a>
               {% endif %}
 
               {% assign next = forloop.index | plus: 1 %}
@@ -51,13 +51,13 @@
     {% assign slug_title = item.title | slugify %}
     {% if page.url contains slug_title %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
         <li class="{{ active }}">
-            <a href={{ "{{ ch_path }}{{ item.url }}" | relative_url }}>{{ item.title }}</a>
+            <a href="{{ site.baseurl }}{{ ch_path }}{{ item.url }}">{{ item.title }}</a>
             {% if item.submenu  %}
                 {% if page.url contains item.url  %}
                     <ul>
                         {% for entry in item.submenu %}
                         {% if page.url contains entry.url %}{% assign active = 'active' %}{% else %}{% assign active = '' %}{% endif %}
-                        <li class="{{ active }}"><a href={{ "{{ ch_path }}{{ entry.url }}" | relative_url }}>{{ entry.page }}</a></li>
+                        <li class="{{ active }}"><a href="{{ site.baseurl }}{{ ch_path }}{{ entry.url }}">{{ entry.page }}</a></li>
                         {% endfor %}
                     </ul>
                 {% endif %}
