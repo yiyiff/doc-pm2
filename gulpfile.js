@@ -21,13 +21,13 @@ gulp.task('css', function () {
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'))
-    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('docs/assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('js', function() {
     return gulp.src(["assets/js/**/*.js"])
-        .pipe(gulp.dest("_site/assets/js"))
+        .pipe(gulp.dest("docs/assets/js"))
         .pipe(browserSync.reload({stream:true}));
 });
 

@@ -1,13 +1,25 @@
-<footer>
+<article class="markdown-section copyright">
+    <p>© 2018 Keymetrics</p>
+    <ul id="footer">
+        <li><a href="javascript:void(0);">Terms of Use</a></li>
+        <li><a href="javascript:void(0);">Privacy Policy</a></li>
 
-		<div class="">
-			<div class="text-right text-size-80">
-				<p>Copyright &copy;{{ "now" | date: "%Y" }}. All Rights Reserved.</p>
-			</div>
+        <!-- Adds links to other languages on the post -->
+        {% for lang in site.languages %}
+          {% unless site.lang == lang %}
+            {% if lang == site.default_lang %}
+              <li><p class="footer-list">Language: <a href="{{ site.baseurl_root }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
+            {% else %}
+              <li><p class="footer-list">Language: <a href="{{ site.baseurl_root }}/{{ lang }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
+            {% endif %}
 
-		</div>
+            {% assign next = forloop.index | plus: 1 %}
 
-</footer>
+            {% if forloop.last != true and site.languages[forloop.index] != site.lang or site.languages[forloop.index] == site.lang and next < forloop.length %}
+              <span class="separator"> &bull; </span>
+            {% endif %}
 
-
-
+          {% endunless %}
+        {% endfor %}
+    </ul>
+</article>
