@@ -83,7 +83,7 @@ pm2 deploy
 
 ## Next steps 下一步
 
-[Quick Start 快速开始](runtime/quickstart/)
+[Quick Start 快速开始](/{{site.baseurl}}/runtime/quickstart/)
 
 ---
 
