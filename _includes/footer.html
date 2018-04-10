@@ -8,9 +8,9 @@
         {% for lang in site.languages %}
           {% unless site.lang == lang %}
             {% if lang == site.default_lang %}
-              <li><p class="footer-list">Language: <a href="{{ site.baseurl_root }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
+              <li><p class="footer-list">Language: <a href="/{{ site.baseurl_root }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
             {% else %}
-              <li><p class="footer-list">Language: <a href="{{ site.baseurl_root }}/{{ lang }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
+              <li><p class="footer-list">Language: <a href="/{{ site.baseurl_root }}/{{ lang }}{{ page.url }}" >{% t langs.{{ lang }} %}</a></p></li>
             {% endif %}
 
             {% assign next = forloop.index | plus: 1 %}
