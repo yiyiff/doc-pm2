@@ -3,8 +3,7 @@ $(function() {
     pWarn();
     trasformH2();
     smoothScroll (500);
-    // sidebarActive(); // function removed, .active class added Jekyll on page built (server-side rendering)
-    // sidebarOpen(); // function removed, hide and show submenu by Jekyll on page built (server-side rendering)
+     anchorH2();
 });
 
 function helper(className, content) {
@@ -33,13 +32,10 @@ function pWarn() {
 
 
     for (var i = 0; i < length; i++) {
-        // console.log(allPtag[i].outerHTML)
         if(allPtag[i].innerHTML.indexOf("&gt") !== -1) {
         text[i] = transformClass(allPtag[i].innerHTML);
         allPtag[i].outerHTML = text[i];
         }
-        // console.log(text[i])
-        // console.log(`${i+1}/${allPtag.length}`)
     }
 }
 
@@ -48,47 +44,6 @@ function logoClick() {
         $(this).toggleClass('close');
     });
 }
-
-// function removed, .active class added Jekyll on page built (server-side rendering)
-function sidebarActive() {
-    var url = window.location.href;
-
-    // passes on every "a" tag
-    $(".sidebar-nav a").each(function() {
-        // checks if its the same on the address bar
-        if (url == (this.href)) {
-            $(this).closest("li").addClass("active");
-            // $(this).closest("button").click();
-            //for making parent of submenu active
-            $(this).closest("li").parent().parent().addClass("active is-active");
-            $(this).closest("lu").parent().parent().addClass("is-active");
-        }
-    });
-}
-
-// function removed, hide and show submenu by Jekyll on page built (server-side rendering)
-// function sidebarOpen() {
-//     $('.accordion-menu a').each(function(){
-//          var myHref = $(this).attr('href');
-//          var pathname = window.location.pathname;
-//          if(pathname.match(myHref)) {
-//            $('.accordion-menu').foundation('down', $(this).parent().parent());
-//          }
-//     });
-
-//     // // Allow opening sidebar submenu without clicking a button
-//     // $(".sidebar-nav li.is-accordion-submenu-parent > a").click(function() {
-//     //     var $this = $(this);
-//     //     event.preventDefault();
-//     //     var goTo = this.getAttribute("href");
-//     //     $this.next().click();
-//     //     setTimeout(function() {
-//     //     window.location = goTo;
-//     //     }, 200);
-//     //     // alert("A link was clicked!");
-//     //  });
-
-// }
 
 function smoothScroll (duration) {
   $('#main a[href^="#"]').on('click', function(event) {
@@ -151,10 +106,10 @@ function slugify(str) {
   return slug;
 }
 
-$(window).on("load", function () {
+function anchorH2() {
     var urlHash = window.location.href.split("#")[1];
     if (urlHash &&  $('#' + urlHash).length )
           $('html,body').animate({
               scrollTop: $('#' + urlHash).offset().top
           }, 1000);
-});
+}
