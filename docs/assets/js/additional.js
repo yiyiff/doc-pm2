@@ -1,6 +1,8 @@
 $(function() {
     logoClick();
     pWarn();
+    trasformH2();
+    smoothScroll (500);
     // sidebarActive(); // function removed, .active class added Jekyll on page built (server-side rendering)
     // sidebarOpen(); // function removed, hide and show submenu by Jekyll on page built (server-side rendering)
 });
@@ -87,3 +89,65 @@ function sidebarActive() {
 //     //  });
 
 // }
+
+function smoothScroll (duration) {
+  $('#main a[href^="#"]').on('click', function(event) {
+
+      var target = $( $(this).attr('href') );
+
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, duration);
+      }
+  });
+}
+
+function trasformH2() {
+var heading = document.querySelectorAll('h2');
+var length = heading.length;
+var output = {};
+
+  for (var i = length - 1; i >= 0; i--) {
+    var slug = slugify(heading[i].innerText);
+    var text = heading[i].innerText;
+    output[i] = "<h2 id=\"" + slug + "\"><a href=\"#" + slug + "\" data-id=\"" + slug + "\" class=\"anchor\"><span>" + text + "</span></a></h2" + ">";
+    heading[i].outerHTML = output[i];
+  }
+    url = [];
+}
+
+// from docsify.js
+var hasOwn = Object.prototype.hasOwnProperty;
+var cache$1 = {};
+var re = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g;
+
+function lower(string) {
+  return string.toLowerCase();
+}
+
+function slugify(str) {
+  if (typeof str !== 'string') {
+    return '';
+  }
+
+  var slug = str
+    .trim()
+    .replace(/[A-Z]+/g, lower)
+    .replace(/<[^>\d]+>/g, '')
+    .replace(re, '')
+    .replace(/\s/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^(\d)/, '_$1');
+  var count = cache$1[slug];
+
+  count = hasOwn.call(cache$1, slug) ? count + 1 : 0;
+  cache$1[slug] = count;
+
+  if (count) {
+    slug = slug + '-' + count;
+  }
+
+  return slug;
+}
