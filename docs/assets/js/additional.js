@@ -115,7 +115,6 @@ var output = {};
     output[i] = "<h2 id=\"" + slug + "\"><a href=\"#" + slug + "\" data-id=\"" + slug + "\" class=\"anchor\"><span>" + text + "</span></a></h2" + ">";
     heading[i].outerHTML = output[i];
   }
-    url = [];
 }
 
 // from docsify.js
@@ -151,3 +150,11 @@ function slugify(str) {
 
   return slug;
 }
+
+$(window).on("load", function () {
+    var urlHash = window.location.href.split("#")[1];
+    if (urlHash &&  $('#' + urlHash).length )
+          $('html,body').animate({
+              scrollTop: $('#' + urlHash).offset().top
+          }, 1000);
+});
