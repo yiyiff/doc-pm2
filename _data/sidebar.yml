@@ -22,10 +22,10 @@ runtime:
         url: "/runtime/guide/development-tools/"
       - page: Easy Deploy with SSH
         url: "/runtime/guide/easy-deploy-with-ssh/"
-  - title: Production Best Practices
+  - title: Best Practices
     url: "/runtime/production-best-practices/"
     submenu:
-      - page: Environment Variables in Node.js
+      - page: Environment Variables
         url: "/runtime/production-best-practices/environment-variables-in-nodejs/"
       - page: Graceful Shutdown
         url: "/runtime/production-best-practices/graceful-shutdown/"
