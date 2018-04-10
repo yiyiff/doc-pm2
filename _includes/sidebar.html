@@ -19,25 +19,6 @@
                     <div class="sidebar_2_item__text">Enterprise</div>
                 </div>
             </a>
-        <div class="lang-selector">
-          <!-- Adds links to other languages on the post -->
-          {% for lang in site.languages %}
-            {% unless site.lang == lang %}
-              {% if lang == site.default_lang %}
-                <a href="/{{ site.baseurl_root }}{{ page.url }}">Language: {% t langs.{{ lang }} %}</a>
-              {% else %}
-                <a href="/{{ site.baseurl_root }}/{{ lang }}{{ page.url }}">Language: <br>{% t langs.{{ lang }} %}</a>
-              {% endif %}
-
-              {% assign next = forloop.index | plus: 1 %}
-
-              {% if forloop.last != true and site.languages[forloop.index] != site.lang or site.languages[forloop.index] == site.lang and next < forloop.length %}
-                <span class="separator"> &bull; </span>
-              {% endif %}
-
-            {% endunless %}
-          {% endfor %}
-        </div>
         </div>
         <div class="main_content">
         </div>

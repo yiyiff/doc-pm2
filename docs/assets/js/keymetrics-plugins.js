@@ -325,7 +325,7 @@ var KeymetricsPlugin = (function() {
         mountExtraSidebar(changePageClassWhenSidebarLinkClicked);
         setSidebarBreakpoints();
         createSidebarLinkClickHandler();
-        insertFooter();
+        // insertFooter();
         $('article#main.markdown-section').html(getEditPageBlock() + $('article#main.markdown-section').html());
     });
 
