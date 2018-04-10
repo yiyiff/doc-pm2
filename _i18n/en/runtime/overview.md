@@ -78,7 +78,7 @@ pm2 deploy
 
 ## Next steps
 
-[Quick Start](/{{site.baseurl}}/runtime/quickstart/)
+[Quick Start](/{{site.baseurl}}/runtime/quick-start/)
 
 ---
 
