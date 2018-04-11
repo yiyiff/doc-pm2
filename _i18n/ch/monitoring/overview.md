@@ -10,13 +10,13 @@ Why monitor your app with pm2 ? At the end of this pm2 monitoring overview, you'
 
 PM2 Monitoring allows you to have an extended view of all your apps and databases in one single place, at real-time or through history. **Stop ssh in all your servers one by one**, instead, save time by having a condensed infrastructure monitoring view.
 
-![a unified overview](overview/unified.png)
+![a unified overview](/{{site.baseurl}}/monitoring/overview/unified.png)
 
 ### Custom Metrics
 
 Expose the important variables from your Node.js applications source code and display them as performance metrics on the pm2 monitoring dashboard. **Monitor values that matter.**
 
-![custom metrics](overview/personalized.png)
+![custom metrics](/{{site.baseurl}}/monitoring/overview/personalized.png)
 
 ### Notifications
 
@@ -24,7 +24,7 @@ Know when a data reaches a threshold, when an error occurred in your application
 
 Even though pm2 runtime makes sure that your application have no downtime, be notified in these critical situation in order to react. **Be notified and reactive in any critical situations.**
 
-![notifications](overview/notifications.png)
+![notifications](/{{site.baseurl}}/monitoring/overview/notifications.png)
 
 ---
 
@@ -36,7 +36,7 @@ PM2 Monitoring reports the list of all errors in the "Issue Dashboard" occurred 
 
 Stop spending time finding bugs or trying to replay them, we provide you an "Issue Dashboard" with everything in one place, to make debugging easier. **Drill down in your code and get the answer.**
 
-![issue dashboard](overview/issue.png)
+![issue dashboard](/{{site.baseurl}}/monitoring/overview/issue.png)
 
 ### Transaction Tracing
 
@@ -44,7 +44,7 @@ Record and aggregate the database and external calls that your application makes
 
 The "Transaction Tracing" helps you troubleshoot performance issues and to get detailed low-level insight into how your app is working (slowest routes, most consuming, number of calls). **Provide a better user experience and make your app faster.**
 
-![transaction tracing](overview/tracing.png)
+![transaction tracing](/{{site.baseurl}}/monitoring/overview/tracing.png)
 
 ### Memory & CPU profiling
 
@@ -52,7 +52,7 @@ Take memory dumps and CPU snapshots straight from your production servers.
 
 **Memory profiling lets you find any memory leaks in your application. CPU profiling helps you identify particular resource-heavy tasks.**
 
-![cpu and memory profiling](overview/profiling.png)
+![cpu and memory profiling](/{{site.baseurl}}/monitoring/overview/profiling.png)
 
 ---
 
@@ -64,7 +64,7 @@ PM2 Monitoring makes possible to enhance custom functions in the source code of 
 
  For example, you can assign values to your application variables or just switch it to maintenance mode. In other words you can **expose triggerable functions in your code**.
 
-![remote action](overview/remote.png)
+![remote action](/{{site.baseurl}}/monitoring/overview/remote.png)
 
 ### Event Dashboard
 
@@ -73,7 +73,7 @@ This mechanism allows you to track important events that occurred in your code. 
 For example your can track and be alerted when a new user has registered, a new email has been sent, a worker has finished its jobs. **You can emit any event directly from your code and subscribe to some of these.**
 
 
-![event](overview/event.png)
+![event](/{{site.baseurl}}/monitoring/overview/event.png)
 
 ### Third-party modules
 
@@ -81,14 +81,14 @@ Extend the capabilities of the PM2 dashboard by using external modules listed in
 
 A Pm2 module can be a log rotation module, database monitoring module, a standalone http proxy, a load balancer, a DNS server or any kind of utility. **Anyone can create and publish its own module.**
 
-![modules](overview/modules.png)
+![modules](/{{site.baseurl}}/monitoring/overview/modules.png)
 
 
 ---
 
 ### Next steps
 
-[Quick Start](monitoring/quickstart.md)
+[Quick Start](/{{site.baseurl}}/monitoring/quickstart/)
 
 ---
 
