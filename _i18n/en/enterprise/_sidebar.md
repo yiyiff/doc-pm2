@@ -1,3 +1,3 @@
 <!-- docs/_sidebar.md -->
 
-- [Overview](/{{site.baseurl}}/enterprise/)
+- [Overview]({{site.baseurl}}/enterprise/)

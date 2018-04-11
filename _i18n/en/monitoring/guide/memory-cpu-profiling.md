@@ -4,7 +4,7 @@ Profiling tools help you diagnose memory and CPU usage and other application-lev
 
 The profiling in pm2 monitoring allows you to take remote CPU/memory snapshots of your production servers. You get the associated files ready to be inspected with the chrome developer tools.
 
-![cpu and memory profiling](/{{site.baseurl}}/monitoring/overview/profiling.png)
+![cpu and memory profiling]({{site.baseurl}}/monitoring/overview/profiling.png)
 
 ---
 
@@ -34,7 +34,7 @@ It gets you a visualisation of the stack and still offer the ability to download
 
 Thanks for finishing this guide.
 
-You can now take a look at the [reference](/{{site.baseurl}}/monitoring/reference/pmx.md) to master all the capabilities of pm2.
+You can now take a look at the [reference]({{site.baseurl}}/monitoring/reference/pmx.md) to master all the capabilities of pm2.
 
 ---
 

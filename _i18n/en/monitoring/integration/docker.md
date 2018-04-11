@@ -2,7 +2,7 @@
 
 In seconds, this tutorial will show you how to monitor a node.js application with `pm2` inside a container.
 
-We assume that your app has already been wrapped with pm2. If not, follow the [docker tutorial](/{{site.baseurl}}/runtime/integration/docker.md).
+We assume that your app has already been wrapped with pm2. If not, follow the [docker tutorial]({{site.baseurl}}/runtime/integration/docker.md).
 
 ---
 
@@ -53,7 +53,7 @@ PM2_MACHINE_NAME=docker-server
 
 ## Next step
 
-Complete your [dashboard configuration](/{{site.baseurl}}/monitoring/guide/configuration.md)
+Complete your [dashboard configuration]({{site.baseurl}}/monitoring/guide/configuration.md)
 
 ---
 

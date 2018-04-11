@@ -13,7 +13,7 @@ plugins:
   - jekyll-feed
   - jekyll-multiple-languages-plugin
 # keep_files: [images]
-baseurl: "doc-pm2"
+baseurl: "/doc-pm2"
 destination: docs
 exclude: ["node_modules","README.md", "gulpfile.js", "package.json", "package-lock.json", ".jekyll-metadata", "source-code","fonts","uru*","_site/assets/javascript/anchor-js/","assets/scss-temp/"]
 

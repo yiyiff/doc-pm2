@@ -72,7 +72,7 @@ pm2 resurrect
 
 ?> Your process list is saved into `$HOME/.pm2/dump.pm2`.
 
-You can then setup a [startup script](/{{site.baseurl}}/runtime/guide/installation?id=install-a-startup-script), to automatically start your process list through machine restarts.
+You can then setup a [startup script]({{site.baseurl}}/runtime/guide/installation?id=install-a-startup-script), to automatically start your process list through machine restarts.
 
 ---
 
@@ -122,13 +122,13 @@ The local monitoring tool get you insight about CPU usage, memory usage, loop de
 pm2 monit
 ```
 
-![local monitoring with pm2](/{{site.baseurl}}/runtime/overview/monit.png)
+![local monitoring with pm2]({{site.baseurl}}/runtime/overview/monit.png)
 
 ---
 
 ## Next step
 
-[Log Management](/{{site.baseurl}}/runtime/guide/log-management/)
+[Log Management]({{site.baseurl}}/runtime/guide/log-management/)
 
 ---
 

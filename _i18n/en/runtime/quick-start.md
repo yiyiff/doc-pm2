@@ -22,7 +22,7 @@ With debian, use the install script:
 apt update && apt install sudo curl && curl -sL https://raw.githubusercontent.com/Unitech/pm2/master/packager/setup.deb.sh | sudo -E bash -
 ```
 
-With docker, follow this [tutorial](/{{site.baseurl}}/runtime/integration/docker/).
+With docker, follow this [tutorial]({{site.baseurl}}/runtime/integration/docker/).
 
 ### CLI autocompletion
 
@@ -70,7 +70,7 @@ pm2 start app
 pm2 restart app
 ```
 
-You can also setup a [startup script](/{{site.baseurl}}/runtime/guide/#install-pm2), to automatically start your process list at machine restart.
+You can also setup a [startup script]({{site.baseurl}}/runtime/guide/#install-pm2), to automatically start your process list at machine restart.
 
 ---
 
@@ -112,17 +112,17 @@ pm2 reload app
 
 Using tabulation, you can use the autocompletion:
 
-![pm2 listing](/{{site.baseurl}}/runtime/overview/autocomplete.png)
+![pm2 listing]({{site.baseurl}}/runtime/overview/autocomplete.png)
 
 Use `--help`to get more information on a command:
 
-![pm2 listing](/{{site.baseurl}}/runtime/overview/help.png)
+![pm2 listing]({{site.baseurl}}/runtime/overview/help.png)
 
 ---
 
 ## Next steps
 
-[Ecosystem File](/{{site.baseurl}}/runtime/guide/ecosystem-file/)
+[Ecosystem File]({{site.baseurl}}/runtime/guide/ecosystem-file/)
 
 ---
 

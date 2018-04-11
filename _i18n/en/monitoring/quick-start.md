@@ -2,7 +2,7 @@
 
 In seconds, this Quick Start tutorial will show you how to start monitoring your node.js application with pm2.
 
-We assume that your app has been started or wrapped with pm2. If not, follow the [Quick Start](/{{site.baseurl}}/runtime/quickstart.md) tutorial.
+We assume that your app has been started or wrapped with pm2. If not, follow the [Quick Start]({{site.baseurl}}/runtime/quickstart.md) tutorial.
 
 ---
 
@@ -56,13 +56,13 @@ pm2 reload all
 
 Go back to the dashboard, you have now access to realtime metrics of your app.
 
-![a unified overview](/{{site.baseurl}}/monitoring/overview/unified.png)
+![a unified overview]({{site.baseurl}}/monitoring/overview/unified.png)
 
 ---
 
 ## Next steps
 
-[Configuration](/{{site.baseurl}}/monitoring/guide/configuration.md)
+[Configuration]({{site.baseurl}}/monitoring/guide/configuration.md)
 
 ---
 

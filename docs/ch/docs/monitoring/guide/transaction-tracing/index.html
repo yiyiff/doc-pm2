@@ -222,7 +222,7 @@
     <span class="c1">// Ignore request based on matching string/regex for each field</span>
     <span class="c1">// Only one value need to match for the request to be ignored.</span>
     <span class="c1">// Example :</span>
-    <span class="c1">// ignoreFilter: { path: [/v1/, '/'], ip: [/127.0.0.1/, '::1'] } </span>
+    <span class="c1">// ignoreFilter: { path: [/v1/, '/'], ip: [/127.0.0.1/, '::1'] }</span>
     <span class="c1">// will ignore request that contains v1 in their path or the index</span>
     <span class="c1">// it will ignore request that has been made by localhost</span>
     <span class="nx">ignoreFilter</span><span class="p">:</span> <span class="p">{</span>
@@ -292,7 +292,7 @@
   <li><code class="highlighter-rouge">pg</code> version ^6.x</li>
 </ul>
 
-<p>Then record all requests made or received by them then sended to PM2 to be aggregated. 
+<p>Then record all requests made or received by them then sended to PM2 to be aggregated.
 The impact on performance should be low since there is no heavy logic done in your process except wrap modules and sending data.</p>
 
 <hr />

@@ -4,7 +4,7 @@ The transaction tracing is useful to troubleshoot performance issues and get det
 
 Slow HTTP calls are identified and the database and external calls are aggregated to understand why.
 
-![transaction tracing](/{{site.baseurl}}/monitoring/overview/tracing.png)
+![transaction tracing]({{site.baseurl}}/monitoring/overview/tracing.png)
 
 ---
 
@@ -50,7 +50,7 @@ You must use the pmx initialisation to customize your transaction tracing.
     // Ignore request based on matching string/regex for each field
     // Only one value need to match for the request to be ignored.
     // Example :
-    // ignoreFilter: { path: [/v1/, '/'], ip: [/127.0.0.1/, '::1'] } 
+    // ignoreFilter: { path: [/v1/, '/'], ip: [/127.0.0.1/, '::1'] }
     // will ignore request that contains v1 in their path or the index
     // it will ignore request that has been made by localhost
     ignoreFilter: {
@@ -66,7 +66,7 @@ You must use the pmx initialisation to customize your transaction tracing.
     samplingRate: 0
  }
  ```
- 
+
 
 ---
 
@@ -91,7 +91,7 @@ You can sort the recorded path of your app according to:
 
 Some transactions have the same path but respond differently: a forbidden access on a route can return a 403 and be executed differently than usual. We call those **variances**: for each path we log up 5 most used variances that you can examine here.
 
-Let's examine a specific variance: 
+Let's examine a specific variance:
 * median, slowest and fastest call response time
 * Metadata about the call
 * List of registered subcalls. If no call to an external [entity](http://docs.keymetrics.io/docs/pages/tracing/#under-the-hood) is made, nothing will appear here. The call display and information depends on the stack logged. For databases, you will for example see the database call made.
@@ -102,7 +102,7 @@ You can then click on another **variance** to examine why and how the behaviour 
 
 ## Under the hood
 
-PMX will wrap below modules if they exist in your application : 
+PMX will wrap below modules if they exist in your application :
  - `express` version 4
  - `hapi` versions 8 - 13
  - `restify` versions 3 - 4
@@ -113,8 +113,8 @@ PMX will wrap below modules if they exist in your application :
  - `mysql` version ^2.9
  - `pg` version ^6.x
 
-Then record all requests made or received by them then sended to PM2 to be aggregated. 
-The impact on performance should be low since there is no heavy logic done in your process except wrap modules and sending data. 
+Then record all requests made or received by them then sended to PM2 to be aggregated.
+The impact on performance should be low since there is no heavy logic done in your process except wrap modules and sending data.
 
 ---
 
@@ -138,7 +138,7 @@ The impact on performance should be low since there is no heavy logic done in yo
 
 ## Next steps
 
-[Profiling](/{{site.baseurl}}/monitoring/guide/profiling.md)
+[Profiling]({{site.baseurl}}/monitoring/guide/profiling.md)
 
 ---
 
