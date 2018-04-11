@@ -2,14 +2,14 @@
 
 Three references are available:
 
-- [Ecosystem File Reference](runtime/references/ecosystem-file.md)
+- [Ecosystem File Reference](/{{site.baseurl}}/runtime/references/ecosystem-file/)
 
 A complete description of all options available in the ecosystem file.
 
-- [CLI Reference](runtime/references/cli.md)
+- [CLI Reference](/{{site.baseurl}}/runtime/references/cli/)
 
 A complete description of CLI commands available.
 
-- [Programmatic Reference](runtime/references/pm2.md)
+- [Programmatic Reference](/{{site.baseurl}}/runtime/references/pm2/)
 
 A complete description of all methods available when using pm2 programmatically.
