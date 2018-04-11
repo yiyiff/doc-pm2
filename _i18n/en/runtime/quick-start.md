@@ -112,11 +112,11 @@ pm2 reload app
 
 Using tabulation, you can use the autocompletion:
 
-![pm2 listing](/runtime/overview/autocomplete.png)
+![pm2 listing](/{{site.baseurl}}/runtime/overview/autocomplete.png)
 
 Use `--help`to get more information on a command:
 
-![pm2 listing](/runtime/overview/help.png)
+![pm2 listing](/{{site.baseurl}}/runtime/overview/help.png)
 
 ---
 
