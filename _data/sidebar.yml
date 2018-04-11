@@ -85,7 +85,7 @@ monitoring:
         url: "/monitoring/integration/heroku/"
       - page: With a Cloud Provider
         url: "/monitoring/integration/cloud-providers/"
-  - title: References
+  - title: Reference
     url: "/monitoring/reference/"
 
 enterprise:
