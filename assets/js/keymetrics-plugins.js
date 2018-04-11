@@ -1,23 +1,4 @@
 var KeymetricsPlugin = (function() {
-    function changePageClassBasedOnTheUrl(activeClass) {
-        var route = location.href.replace(location.origin, '');
-        toggleClass('html', 'runtime-page', false);
-        toggleClass('html', 'monitoring-page', false);
-        toggleClass('html', 'enterprise-page', false);
-        if (activeClass) {
-            return toggleClass('html', activeClass, true);
-        }
-        if (route.indexOf('runtime') !== -1) {
-            return toggleClass('html', 'runtime-page', true);
-        }
-        if (route.indexOf('monitoring') !== -1) {
-            return toggleClass('html', 'monitoring-page', true);
-        }
-        if (route.indexOf('enterprise') !== -1) {
-            return toggleClass('html', 'enterprise-page', true);
-        }
-    }
-
     function mountExtraSidebar(next) {
         var html = find('#sidebar2-template').innerHTML.toString().trim();
         var s = find('.sidebar');
@@ -319,7 +300,6 @@ var KeymetricsPlugin = (function() {
     }
 
     $(document).ready(function(event) {
-        changePageClassBasedOnTheUrl();
         configureSearchBar();
         logoTogglesSidebarOnMobile();
         mountExtraSidebar(changePageClassWhenSidebarLinkClicked);

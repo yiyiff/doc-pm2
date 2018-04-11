@@ -1,11 +1,14 @@
-{% if page.url contains 'runtime' %}{% assign class ='runtime-page' %}{% elsif page.url contains "monitoring" %}{% assign class ="monitoring-page" %}{% elsif page.url contains "enterprise" %}{% assign class ="enterprise-page" %}
 <!DOCTYPE html>
-<html class={{class}}>
+{% if page.url contains 'runtime' %}
+  <html class='runtime-page'>
+{% elsif page.url contains "monitoring" %}
+  <html class='monitoring-page'>
+{% elsif page.url contains "enterprise" %}
+  <html class='enterprise-page'>
 {% endif %}
-
 {% include head.html %}
 
-<body class="ready sticky">
+<body class="test ready sticky">
 
     {% include header.html %}
 
