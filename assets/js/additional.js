@@ -3,7 +3,7 @@ $(function() {
     pWarn();
     trasformH2();
     smoothScroll (500);
-     anchorH2();
+    anchorH2();
 });
 
 function helper(className, content) {
