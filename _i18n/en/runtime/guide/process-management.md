@@ -72,7 +72,7 @@ pm2 resurrect
 
 ?> Your process list is saved into `$HOME/.pm2/dump.pm2`.
 
-You can then setup a [startup script](/runtime/guide/installation?id=install-a-startup-script), to automatically start your process list through machine restarts.
+You can then setup a [startup script](/{{site.baseurl}}/runtime/guide/installation?id=install-a-startup-script), to automatically start your process list through machine restarts.
 
 ---
 
@@ -128,7 +128,7 @@ pm2 monit
 
 ## Next step
 
-[Log Management](/runtime/guide/log-management/)
+[Log Management](/{{site.baseurl}}/runtime/guide/log-management/)
 
 ---
 
