@@ -1,12 +1,5 @@
-var KeymetricsPlugin = (function() {
-    function mountExtraSidebar(next) {
-        var html = find('#sidebar2-template').innerHTML.toString().trim();
-        var s = find('.sidebar');
-        var el = toDom(html);
-        s.insertBefore(el, s.children[0]);
-        next();
-    }
-
+(function() {
+  // ok
     function setSidebarBreakpoints() {
         var onResize = function() {
             var w = window.innerWidth;
@@ -20,7 +13,7 @@ var KeymetricsPlugin = (function() {
         onResize();
     }
 
-
+// ok
     function logoTogglesSidebarOnMobile() {
         var el = find('.PM2_logo');
         if (el) {
@@ -54,6 +47,7 @@ var KeymetricsPlugin = (function() {
         };
     }
 
+     // ok
     function configureSearchBarDocSearch() {
         docsearch({
             appId: 'VOHJUDHWT7',
@@ -64,61 +58,8 @@ var KeymetricsPlugin = (function() {
         });
     }
 
-    function cofigureSearchBarInstantSearch() {
-
-        window.onHitClick = function(dataId) {
-            setTimeout(function() {
-                anchorClickScrollFix(dataId, 0); //Docsify needs to render the article first.
-            }, 10);
-        };
-
-        const root = '.search-wrapper';
-        const search = instantsearch({
-            appId: 'VOHJUDHWT7',
-            apiKey: '287f3974c9d415757200ffa7052bca0f',
-            indexName: 'pm2',
-            urlSync: false,
-            searchFunction: searchFunction
-        });
-
-        hideAlgoliaResultsWithEscKey();
-
-        function searchFunction(h) {
-            h.search();
-        }
-
-        search.addWidget(
-            instantsearch.widgets.searchBox({
-                container: root,
-                placeholder: 'Search documentation...'
-            })
-        );
-
-        search.addWidget(
-            instantsearch.widgets.hits({
-                container: '#hits',
-                templates: {
-                    empty: 'No results',
-                    item: `<a
-                href="{{{href}}}"
-                onclick="onHitClick('{{{dataId}}}')"
-                >{{{_highlightResult.label.value}}}</a>`
-                },
-                transformData: {
-                    item: function(hit) {
-                        //console.log('HIT', hit)
-                        return hit;
-                    }
-                }
-            })
-        );
-
-        search.start();
-    }
-
     function configureSearchBar() {
         return configureSearchBarDocSearch();
-        //return cofigureSearchBarInstantSearch();
     }
 
 
@@ -164,24 +105,8 @@ var KeymetricsPlugin = (function() {
         iterateSelectorResults('.sidebar a', function(a) {
             addEvent(a, 'click', function() {
                 anchorClickScrollFix();
-                //closeSidebarOnSmallScreens();
             });
         });
-    }
-
-
-
-    function insertFooter(hook, vm) {
-        var footer = `
-            <article class="markdown-section copyright">
-                <p>&copy; 2018 Keymetrics</p>
-                <ul>
-                    <li><a href="javascript:void(0);">Terms of Use</a></li>
-                    <li><a href="javascript:void(0);">Privacy Policy</a></li>
-                </ul>
-            </article>
-    `;
-        find('section.content').innerHTML += footer;
     }
 
     function configureGittalkPlugin() {
@@ -207,6 +132,7 @@ var KeymetricsPlugin = (function() {
         return wrapper.firstChild;
     }
 
+    // ok
     function toggleClass(el, className, toggleValue) {
         if (el && !el.tagName) {
             el = find(el);
@@ -266,72 +192,24 @@ var KeymetricsPlugin = (function() {
         }
     }
 
-    function getTopBlock() {
-        const topBlock = `<div class="markdown-section gettings_started_block topBlock">
-        <p>
-        Getting started with PM2
-        <span class="runtime_block gettings_started_block_span">Runtime</span>
-        <span class="monitoring_block gettings_started_block_span">Monitoring</span>
-        <span class="enterprise_block gettings_started_block_span">Enterprise</span>
-        </p>
-    </div>`;
-        return topBlock;
-    }
-
-    function getEditPageBlock() {
-        return `
-        <div class="edit-page">
-            <a class="edit-page__text"
-            target="_blank" href="https://github.com/rmonnier/pm2-docsify-proto/blob/master/docs${$docsify.nameLink}.md"
-            >Edit Page</a>
-        </div>
-        `;
-    }
-
     function removeEl(selector) {
         var element = document.querySelector(selector);
         element.parentNode.removeChild(element);
     }
 
-    function changePageClassWhenSidebarLinkClicked() {
-        $('.sidebar_2 a').on('click', function() {
-            changePageClassBasedOnTheUrl(this.dataset.page);
-        });
-    }
+    function fixLinks(html) {
+      var types = ['runtime', 'monitoring', 'enterprise'];
+      types.forEach(function(t) {
+          html = html.replace(new RegExp(t + '/' + t, 'g'), t);
+      });
+      return html;
+  }
 
     $(document).ready(function(event) {
         configureSearchBar();
         logoTogglesSidebarOnMobile();
-        mountExtraSidebar(changePageClassWhenSidebarLinkClicked);
         setSidebarBreakpoints();
         createSidebarLinkClickHandler();
-        // insertFooter();
-        // $('article#main.markdown-section').html(getEditPageBlock() + $('article#main.markdown-section').html());
     });
 
-    function fixLinks(html) {
-        var types = ['runtime', 'monitoring', 'enterprise'];
-        types.forEach(function(t) {
-            html = html.replace(new RegExp(t + '/' + t, 'g'), t);
-        });
-        return html;
-    }
-
-    return function(hook, vm) {
-        hook.beforeEach(function(content) {
-            removeEl('.topBlock');
-            return content
-        });
-        hook.afterEach(function(html, next) {
-            next(getEditPageBlock() + fixLinks(html));
-        });
-        hook.doneEach(function() {
-            appendAt(find('section.content'), toDom(getTopBlock()), 0);
-        });
-        hook.mounted(function() {
-            removeEl('.sidebar-toggle');
-
-        });
-    }
 })();
-$docsify.plugins.push(KeymetricsPlugin);
