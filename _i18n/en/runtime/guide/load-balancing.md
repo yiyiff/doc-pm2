@@ -3,7 +3,7 @@
 
 The built-in load-balancer provides networked Node.js applications (http(s)/tcp/udp server) to be scaled accross all CPUs available, without any code modifications.
 
-![http://i.imgur.com/kTAowsL.png](http://i.imgur.com/kTAowsL.png)
+![scale across all cpu's available](/{{site.baseurl}}/runtime/guide/cluster-mode.png)
 
 ---
 

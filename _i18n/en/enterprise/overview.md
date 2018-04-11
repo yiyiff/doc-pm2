@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="350px" src="/docs/enterprise/enterprise-black.png" alt="pm2 logo">
+    <img width="350px" src="/doc-pm2/enterprise/enterprise-black.png" alt="pm2 logo">
 </p>
 <p align="center">
     <b>P</b>(rocess) <b>M</b>(anager) <b>2</b><br/>
