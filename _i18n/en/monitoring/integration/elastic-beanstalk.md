@@ -2,7 +2,7 @@
 
 In seconds, this tutorial will show you how to monitor a Node.js application with `pm2` in an AWS Elastic Beanstalk environment.
 
-We assume that your app has already been wrapped with pm2. If not, follow our [AWS Elastic Beanstalk tutorial](/runtime/integration/beanstalk.md).
+We assume that your app has already been wrapped with pm2. If not, follow our [AWS Elastic Beanstalk tutorial](/{{site.baseurl}}/runtime/integration/beanstalk.md).
 
 ---
 
@@ -43,7 +43,7 @@ eb setenv PM2_MACHINE_NAME=aws-eb-server
 
 ## Next step
 
-Complete your [dashboard configuration](/monitoring/guide/configuration.md)
+Complete your [dashboard configuration](/{{site.baseurl}}/monitoring/guide/configuration.md)
 
 ---
 

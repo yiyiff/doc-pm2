@@ -34,7 +34,7 @@ It gets you a visualisation of the stack and still offer the ability to download
 
 Thanks for finishing this guide.
 
-You can now take a look at the [reference](/monitoring/reference/pmx.md) to master all the capabilities of pm2.
+You can now take a look at the [reference](/{{site.baseurl}}/monitoring/reference/pmx.md) to master all the capabilities of pm2.
 
 ---
 

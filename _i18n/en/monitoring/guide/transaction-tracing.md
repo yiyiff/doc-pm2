@@ -138,7 +138,7 @@ The impact on performance should be low since there is no heavy logic done in yo
 
 ## Next steps
 
-[Profiling](/monitoring/guide/profiling.md)
+[Profiling](/{{site.baseurl}}/monitoring/guide/profiling.md)
 
 ---
 
