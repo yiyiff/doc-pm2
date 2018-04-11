@@ -51,7 +51,7 @@ function smoothScroll (duration) {
       var target = $( $(this).attr('href') );
 
       if( target.length ) {
-          event.preventDefault();
+          // event.preventDefault();
           $('html, body').animate({
               scrollTop: target.offset().top
           }, duration);
