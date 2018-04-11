@@ -72,7 +72,7 @@ To be sure that all requests are properly handled in a reload, you need to be su
 
 A graceful shutdown makes sure to handle all remaining queries before exiting the application and closes all external connections.
 
-Get help to setup graceful shutdown with our [tutorial]({{site.baseurl}}/runtime/production-best-practices/graceful/).
+Get help to setup graceful shutdown with our [tutorial]({{site.baseurl}}/runtime/production-best-practices/graceful-shutdown/).
 
 ---
 

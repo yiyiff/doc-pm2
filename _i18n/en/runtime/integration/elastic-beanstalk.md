@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-?> Learn more about ecosystem file [here](runtime/guide/ecosystem-file.md).
+?> Learn more about ecosystem file [here]({{site.baseurl}}/runtime/guide/ecosystem-file/).
 
 ### Add PM2 as a module
 
@@ -176,9 +176,9 @@ That's all! Run `eb open` to open your app in the browser.
 
 ## Next step
 
-Complete your configuration with the [Ecosystem File](runtime/guide/ecosystem-file.md)
+Complete your configuration with the [Ecosystem File]({{site.baseurl}}/runtime/guide/ecosystem-file/)
 
-Monitor your app on a dashboard, with [PM2 Monitoring](monitoring/integration/beanstalk.md)
+Monitor your app on a dashboard, with [PM2 Monitoring]({{site.baseurl}}/monitoring/integration/elastic-beanstalk/)
 
 ---
 
