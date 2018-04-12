@@ -1,30 +1,3 @@
-<template id="sidebar2-template">
-    <div class="sidebar_2_wrapper">
-        <div class="sidebar_2">
-            <a href={{ "/runtime/overview" | relative_url }} data-page="runtime-page">
-                <div class="sidebar_2_item sidebar_2_item_runtime">
-                    <img class={{ "sidebar_2_item__image" src="/{{ site.baseurl_root }}/assets/static/pm2-logo-r.png">
-                    <div class="sidebar_2_item__text">Runtime</div>
-                </div>
-            </a>
-            <a href={{ "/monitoring/overview" | relative_url }} data-page="monitoring-page">
-                <div class="sidebar_2_item sidebar_2_item_monitoring">
-                    <img class={{ "sidebar_2_item__image" src="/{{ site.baseurl_root }}/assets/static/pm2-logo-m.png">
-                    <div class="sidebar_2_item__text">Monitoring</div>
-                </div>
-            </a>
-            <a href={{ "/enterprise/overview" | relative_url }} data-page="enterprise-page">
-                <div class="sidebar_2_item sidebar_2_item_enterprise">
-                    <img class={{ "sidebar_2_item__image" src="/{{ site.baseurl_root }}/assets/static/pm2-logo-e.png">
-                    <div class="sidebar_2_item__text">Enterprise</div>
-                </div>
-            </a>
-        </div>
-        <div class="main_content">
-        </div>
-    </div>
-</template>
-<div class="footer-fixed-box"></div>
 <div class="section header-section">
     <div class=" header-container">
         <div class="PM2_logo_wrapper">
@@ -33,7 +6,7 @@
             </a>
         </div>
         <div class="PM2_search search-wrapper">
-            <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input class="search_input ds-input" placeholder="Search documentation..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Blender, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+            <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input class="search_input ds-input" placeholder="Search documentation..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Saira, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
             <div class="PM2_search_icon"><i class="fas fa-search"></i></div>
             <div id="hits" class="algolia-results">
                 <!-- Hits widget will appear here -->
@@ -41,6 +14,3 @@
         </div>
     </div>
 </div>
-<nav class="app-nav no-badge">
-    <!--navbar-->
-</nav>

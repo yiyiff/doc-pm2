@@ -26,7 +26,7 @@ pm2 creates a list of processes, that you can access with:pm2会创建一个您�
 pm2 ls
 ```
 
-![pm2 listing pm2 列表](/{{site.baseurl}}/runtime/overview/pm2ls.png)
+![pm2 listing pm2 列表]({{site.baseurl}}/runtime/overview/pm2ls.png)
 
 Manage your process list with `pm2 start` and `pm2 delete`。
 用`pm2 start` 和 `pm2 delete` 管理您的进程列表。
@@ -66,7 +66,7 @@ Monitor your app in the terminal to check your app health (CPU usage, memory use
 pm2 monit
 ```
 
-![local monitoring with pm2 用pm2进行本地监测](/{{site.baseurl}}/runtime/overview/monit.png)
+![local monitoring with pm2 用pm2进行本地监测]({{site.baseurl}}/runtime/overview/monit.png)
 
 ---
 
@@ -83,7 +83,7 @@ pm2 deploy
 
 ## Next steps 下一步
 
-[Quick Start 快速开始](/{{site.baseurl}}/runtime/quick-start/)
+[Quick Start 快速开始]({{site.baseurl}}/runtime/quick-start/)
 
 ---
 

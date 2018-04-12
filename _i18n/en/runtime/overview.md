@@ -25,7 +25,7 @@ pm2 creates a list of processes, that you can access with:
 pm2 ls
 ```
 
-![pm2 listing](/{{site.baseurl}}/runtime/overview/pm2ls.png)
+![pm2 listing]({{site.baseurl}}/assets/img/runtime/pm2ls.png)
 
 Manage your process list with `pm2 start` and `pm2 delete`.
 
@@ -62,7 +62,7 @@ Monitor your app in the terminal to check your app health (CPU usage, memory use
 pm2 monit
 ```
 
-![local monitoring with pm2](/{{site.baseurl}}/runtime/overview/monit.png)
+![local monitoring with pm2]({{site.baseurl}}/assets/img/runtime/monit.png)
 
 ---
 
@@ -78,7 +78,7 @@ pm2 deploy
 
 ## Next steps
 
-[Quick Start](/{{site.baseurl}}/runtime/quick-start/)
+[Quick Start]({{site.baseurl}}/runtime/quick-start/)
 
 ---
 

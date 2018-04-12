@@ -3,7 +3,7 @@ $(function() {
     pWarn();
     trasformH2();
     smoothScroll (500);
-     anchorH2();
+    anchorH2();
 });
 
 function helper(className, content) {
@@ -51,7 +51,7 @@ function smoothScroll (duration) {
       var target = $( $(this).attr('href') );
 
       if( target.length ) {
-          event.preventDefault();
+          // event.preventDefault();
           $('html, body').animate({
               scrollTop: target.offset().top
           }, duration);

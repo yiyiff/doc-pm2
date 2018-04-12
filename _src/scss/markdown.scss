@@ -3,7 +3,7 @@
 /* Title: Quick Start */
 
 h1 a span {
-    font-family: Blender, sans-serif;
+    font-family: Saira, sans-serif;
     font-weight: 500;
     color: #202a37;
     font-size: 36px;
@@ -40,7 +40,7 @@ h2 {
 }
 
 h2 a span {
-    font-family: Blender, sans-serif;
+    font-family: Saira, sans-serif;
     font-weight: 500;
     font-size: 32px;
 }
@@ -57,13 +57,13 @@ h2 a:before{
     margin-top: 13px;
 }
 .runtime-page h2 a:before{
-    background-image: url(/doc-pm2/assets/img/rect-r.png);
+    background-image: url(/doc-pm2/assets/img/runtime/rect-r.png);
 }
 .monitoring-page h2 a:before{
-    background-image: url(/doc-pm2/assets/img/rect-m.png);
+    background-image: url(/doc-pm2/assets/img/monitoring/rect-m.png);
 }
 .enterprise-page h2 a:before{
-    background-image: url(/doc-pm2/assets/img/rect-e.png);
+    background-image: url(/doc-pm2/assets/img/enterprise/rect-e.png);
 }
 
 .runtime-page h2 a span {
@@ -84,7 +84,7 @@ h3 {
 }
 
 h3 a span {
-    font-family: Blender, sans-serif;
+    font-family: Saira, sans-serif;
     font-weight: 500;
     font-size:28px;
 }
