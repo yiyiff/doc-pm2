@@ -4,7 +4,7 @@ The transaction tracing is useful to troubleshoot performance issues and get det
 
 Slow HTTP calls are identified and the database and external calls are aggregated to understand why.
 
-![transaction tracing](/monitoring/overview/tracing.png)
+![transaction tracing](/{{site.baseurl}}/monitoring/overview/tracing.png)
 
 ---
 
@@ -138,7 +138,7 @@ The impact on performance should be low since there is no heavy logic done in yo
 
 ## Next steps
 
-[Profiling](/monitoring/guide/profiling.md)
+[Profiling](/{{site.baseurl}}/monitoring/guide/profiling.md)
 
 ---
 

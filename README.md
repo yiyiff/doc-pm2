@@ -1,3 +1,5 @@
+## General note
+
 Please ignore .gulp.js and package.json at the moment.
 
 To run the site:
@@ -25,3 +27,14 @@ For development purpose, I usually use gulp (to concat *.scss to bundle.css, etc
 If for some good reason, you want to start the site with gulp, follow these steps :
 1. Run `npm i` this will install all npm package in package.json
 2. Run `gulp` to execute default task, which build the site and watch for changes on certain folder.
+
+---
+
+## Extra informations
+
+underscore in _docs, _includes,_layout, tell jekyll not to copy to docs folder.
+
+For runtime/overview
+first is the html file root : "runtime/overview.html" serve as the shell
+second file is "_i18n\en\runtime\overview.md" -> english content
+and third file is "_i18n\ch\runtime\overview.md" -> chinese content

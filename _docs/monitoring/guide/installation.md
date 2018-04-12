@@ -64,13 +64,13 @@ pm2 reload all
 
 Go back to the dashboard, you have now access to realtime metrics of your app.
 
-![a unified overview](/monitoring/overview/unified.png)
+![a unified overview](/{{site.baseurl}}/monitoring/overview/unified.png)
 
 ---
 
 ## Next steps
 
-[Configuration](/monitoring/guide/configuration.md)
+[Configuration](/{{site.baseurl}}/monitoring/guide/configuration.md)
 
 ---
 

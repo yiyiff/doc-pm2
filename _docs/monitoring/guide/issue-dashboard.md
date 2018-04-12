@@ -7,7 +7,7 @@ You can track all exceptions that happens on your servers along with:
 
 The issue dashboard primarily reports all the uncaught exceptions. When happening, node.js process crashes and pm2 automatically restarts the application while emiting an exception.
 
-![issue dashboard](/monitoring/overview/issue.png)
+![issue dashboard](/{{site.baseurl}}/monitoring/overview/issue.png)
 
 ---
 
@@ -49,7 +49,7 @@ app.use(pmx.expressErrorHandler())
 
 ## Next steps
 
-[Transaction Tracing](/monitoring/guide/transaction-tracing.md)
+[Transaction Tracing](/{{site.baseurl}}/monitoring/guide/transaction-tracing.md)
 
 ---
 
